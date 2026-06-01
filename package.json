@@ -1,0 +1,10 @@
+{
+  "name": "gpbc-2026",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Global Property Brokers Conference 2026 — Lagos Edition",
+  "scripts": {
+    "dev": "npx --yes serve . -p 3000",
+    "build": "node -e \"console.log('Static site — no build step')\""
+  }
+}
