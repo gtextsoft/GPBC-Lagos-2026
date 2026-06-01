@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Global Property Brokers Conference 2026 — Lagos Edition</title>
+<meta name="description" content="GPBC 2026, Lagos Edition. A one-day, in-person convening of brokers, investors and real estate leaders. Convened by Dr. Stephen Akintayo. 21 June 2026, Lagos, Nigeria." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15110e;
+    --ink-soft:#201a16;
+    --paper:#f3efe8;
+    --paper-2:#e9e3d9;
+    --paper-2:#eae4da;
+    --text:#211c18;
+    --muted:#6d645b;
+    --muted-d:rgba(243,239,232,.60);
+    --red:#9c1822;
+    --red-deep:#7a0f17;
+    --red-bright:#b21f29;
+    --line:#d9d2c6;
+    --line-d:rgba(243,239,232,.16);
+    --serif:"Fraunces",Georgia,serif;
+    --sans:"Hanken Grotesk",sans-serif;
+    --maxw:1200px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--text);
+    font-family:var(--sans);
+    font-size:17px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--red);color:#fff}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+
+  h1,h2,h3{font-family:var(--serif);font-weight:500;font-optical-sizing:auto;letter-spacing:-.01em;line-height:1.05}
+
+  .eyebrow{
+    font-family:var(--sans);font-weight:600;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--red);display:inline-flex;align-items:center;gap:14px;
+  }
+  .eyebrow::before{content:"";width:30px;height:1px;background:var(--red);opacity:.8}
+  .eyebrow.light{color:var(--red-bright)}
+  .eyebrow.light::before{background:var(--red-bright)}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:600;font-size:15px;
+    padding:15px 30px;border-radius:3px;cursor:pointer;border:1.5px solid transparent;
+    transition:background .25s,color .25s,border-color .25s,transform .25s;
+  }
+  .btn .arr{font-size:13px;transition:transform .25s}
+  .btn:hover .arr{transform:translateX(4px)}
+  .btn-primary{background:var(--red);color:#fff;border-color:var(--red)}
+  .btn-primary:hover{background:var(--red-deep);border-color:var(--red-deep)}
+  .btn-outline-d{background:transparent;color:var(--paper);border-color:var(--line-d)}
+  .btn-outline-d:hover{border-color:var(--paper)}
+  .btn-outline-l{background:transparent;color:var(--text);border-color:var(--line)}
+  .btn-outline-l:hover{border-color:var(--text)}
+
+  /* ---------- utility bar ---------- */
+  .utility{background:var(--ink);color:var(--muted-d);border-bottom:1px solid var(--line-d);font-size:13px}
+  .utility .wrap{display:flex;justify-content:space-between;align-items:center;height:42px;letter-spacing:.02em}
+  .utility .u-r{display:flex;gap:26px}
+  .utility a:hover{color:var(--paper)}
+  .utility .sep{color:var(--red-bright)}
+
+  /* ---------- nav ---------- */
+  header.nav{position:sticky;top:0;z-index:1000;background:var(--ink);transition:background .3s,box-shadow .3s,border-color .3s;border-bottom:1px solid var(--line-d)}
+  header.nav.scrolled{background:rgba(243,239,232,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);box-shadow:0 6px 30px -18px rgba(0,0,0,.4)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .mk{width:38px;height:38px;border:1.5px solid var(--red);color:var(--red);display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:18px;border-radius:3px;transition:color .3s,border-color .3s}
+  .brand .wm{font-family:var(--serif);font-weight:600;font-size:19px;color:var(--paper);transition:color .3s;line-height:1.1}
+  .brand .wm small{display:block;font-family:var(--sans);font-weight:600;font-size:10px;letter-spacing:.2em;color:var(--muted-d);text-transform:uppercase;margin-top:2px}
+  header.nav.scrolled .brand .wm{color:var(--text)}
+  header.nav.scrolled .brand .wm small{color:var(--muted)}
+  header.nav.scrolled .brand .mk{color:var(--red);border-color:var(--red)}
+  .nav-links{display:flex;align-items:center;gap:32px}
+  .nav-links a{font-size:14.5px;font-weight:500;color:var(--muted-d);transition:color .25s}
+  header.nav.scrolled .nav-links a{color:var(--muted)}
+  .nav-links a:hover{color:var(--red-bright)}
+  header.nav.scrolled .nav-links a:hover{color:var(--red)}
+  .nav-cta{font-size:14px;font-weight:600;padding:11px 22px;border-radius:3px;border:1.5px solid var(--line-d);color:var(--paper);transition:all .25s}
+  .nav-cta:hover{background:var(--red);border-color:var(--red);color:#fff}
+  header.nav.scrolled .nav-cta{color:var(--text);border-color:var(--line)}
+  header.nav.scrolled .nav-cta:hover{background:var(--red);border-color:var(--red);color:#fff}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+  .burger span{width:26px;height:2px;background:var(--paper);transition:.3s}
+  header.nav.scrolled .burger span{background:var(--text)}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobile{position:fixed;inset:0;z-index:1100;background:var(--ink);display:flex;flex-direction:column;justify-content:center;gap:6px;padding:0 40px;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.2,1)}
+  .mobile.open{transform:translateY(0)}
+  .mobile a{font-family:var(--serif);font-weight:500;font-size:34px;color:var(--paper);padding:10px 0;border-bottom:1px solid var(--line-d)}
+  .mobile a span{color:var(--red-bright);font-family:var(--sans);font-size:14px;margin-right:16px;vertical-align:middle}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;background:var(--ink);color:var(--paper);overflow:hidden;padding:96px 0 0}
+  .hero-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:64px;align-items:start;position:relative;z-index:2}
+  .hero .eyebrow{color:var(--red-bright)}
+  .hero .eyebrow::before{background:var(--red-bright)}
+  .hero h1{font-size:clamp(46px,6.4vw,92px);font-weight:400;margin:26px 0 0;letter-spacing:-.02em}
+  .hero h1 em{font-style:italic;color:#e7ddd0}
+  .hero .sub{color:var(--muted-d);font-size:clamp(17px,1.6vw,20px);max-width:560px;margin:30px 0 0;line-height:1.6}
+  .tagline{margin-top:34px;font-family:var(--sans);font-weight:600;letter-spacing:.04em;font-size:15px;color:var(--paper);text-transform:uppercase}
+  .tagline i{color:var(--red-bright);font-style:normal;margin:0 8px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+
+  .hero-panel{border:1px solid var(--line-d);border-radius:6px;background:rgba(255,255,255,.025);padding:30px 30px 8px}
+  .hero-panel h4{font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--red-bright);margin-bottom:8px}
+  .fact{display:flex;justify-content:space-between;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line-d)}
+  .fact .k{font-size:13px;letter-spacing:.04em;color:var(--muted-d)}
+  .fact .v{font-family:var(--serif);font-weight:500;font-size:20px;color:var(--paper)}
+  .cd-wrap{padding:22px 0 24px}
+  .cd-wrap .lbl{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted-d);margin-bottom:14px}
+  .cd-row{display:flex;gap:0}
+  .cd{flex:1;text-align:center;position:relative}
+  .cd:not(:last-child)::after{content:"";position:absolute;right:0;top:14%;height:60%;width:1px;background:var(--line-d)}
+  .cd b{font-family:var(--serif);font-weight:400;font-size:34px;display:block;line-height:1;color:var(--paper)}
+  .cd small{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-d);margin-top:8px;display:block}
+
+  /* blueprint skyline */
+  .skyline{position:relative;z-index:1;margin-top:54px;line-height:0}
+  .skyline svg{width:100%;height:auto;display:block;opacity:.16}
+
+  /* ---------- credibility strip ---------- */
+  .credit{background:var(--ink-soft);color:var(--muted-d);border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d)}
+  .credit .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 30px;padding:26px 32px;text-align:center;font-size:14px;letter-spacing:.02em}
+  .credit b{font-family:var(--serif);font-weight:500;color:var(--paper);font-size:16px}
+  .credit .dot{width:4px;height:4px;border-radius:50%;background:var(--red-bright)}
+
+  /* ---------- sections ---------- */
+  section{position:relative}
+  .sec{padding:120px 0}
+  .sec.tight{padding:96px 0}
+  .sec-head{max-width:720px;margin-bottom:64px}
+  .sec-head h2{font-size:clamp(32px,4.2vw,54px);font-weight:400;margin:22px 0 0}
+  .sec-head p{color:var(--muted);font-size:18px;margin-top:20px}
+  .lead{font-family:var(--serif);font-weight:400;font-size:clamp(22px,2.6vw,30px);line-height:1.4;color:var(--text)}
+  .body-col p{color:var(--muted);font-size:17px;margin-top:18px;max-width:560px}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+  .pillars{display:grid;gap:0;border-top:1px solid var(--line)}
+  .pillar{padding:26px 0;border-bottom:1px solid var(--line)}
+  .pillar h3{font-family:var(--sans);font-weight:700;font-size:18px;letter-spacing:-.01em;display:flex;align-items:center;gap:14px}
+  .pillar h3 .n{font-family:var(--serif);font-weight:400;font-size:15px;color:var(--red);width:26px}
+  .pillar p{color:var(--muted);font-size:15.5px;margin-top:10px;padding-left:40px}
+
+  /* why */
+  .why{background:var(--ink);color:var(--paper)}
+  .why .sec-head h2{color:var(--paper)}
+  .why .sec-head p{color:var(--muted-d)}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .why-item{padding:36px 30px 36px 0;border-top:2px solid var(--line-d)}
+  .why-item:not(:last-child){border-right:1px solid var(--line-d);padding-right:30px}
+  .why-item .n{font-family:var(--serif);font-weight:400;font-size:18px;color:var(--red-bright)}
+  .why-item h3{font-family:var(--sans);font-weight:700;font-size:19px;color:var(--paper);margin:18px 0 12px;letter-spacing:-.01em}
+  .why-item p{color:var(--muted-d);font-size:15px;line-height:1.6}
+
+  /* convener */
+  .conv{background:var(--paper-2)}
+  .conv-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:64px;align-items:center}
+  .portrait{position:relative;aspect-ratio:4/5;border-radius:6px;overflow:hidden;background:linear-gradient(160deg,#2a201a,#15110e);display:grid;place-items:center;border:1px solid var(--line)}
+  .portrait .mono{font-family:var(--serif);font-weight:400;font-size:120px;color:rgba(243,239,232,.85);z-index:0}
+  .portrait img.person{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;z-index:1}
+  .portrait .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:22px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.78))}
+  .portrait .cap b{font-family:var(--serif);font-weight:500;font-size:20px;color:#fff;display:block}
+  .portrait .cap span{font-size:13px;color:rgba(255,255,255,.78);letter-spacing:.03em}
+  .conv-grid h2{font-size:clamp(30px,3.8vw,48px);font-weight:400;margin:20px 0 8px}
+  .conv-grid .role{color:var(--red);font-weight:600;font-size:16px;letter-spacing:.02em;margin-bottom:22px}
+  .conv-grid p{color:var(--muted);font-size:17px;margin-bottom:16px;max-width:560px}
+
+  /* speakers */
+  .spk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .spk{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden;transition:box-shadow .35s,transform .35s}
+  .spk:hover{transform:translateY(-6px);box-shadow:0 30px 60px -34px rgba(0,0,0,.35)}
+  .spk .ph{position:relative;aspect-ratio:1/1;background:linear-gradient(160deg,#2a201a,#15110e);display:grid;place-items:center}
+  .spk .ph .mono{font-family:var(--serif);font-weight:400;font-size:76px;color:rgba(243,239,232,.85);z-index:0}
+  .spk .ph img.person{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;z-index:1}
+  .spk .tag{position:absolute;left:16px;bottom:16px;z-index:2;font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:7px 13px;border-radius:3px;background:rgba(21,17,14,.78);color:var(--paper);backdrop-filter:blur(4px)}
+  .spk .tag.key{background:var(--red);color:#fff}
+  .spk .meta{padding:24px 24px 28px}
+  .spk .meta h3{font-family:var(--serif);font-weight:500;font-size:23px}
+  .spk .meta .role{color:var(--red);font-weight:600;font-size:13.5px;letter-spacing:.02em;margin-top:6px}
+  .spk .meta p{color:var(--muted);font-size:14.5px;margin-top:12px;line-height:1.55}
+
+  /* who */
+  .who{background:var(--paper-2)}
+  .who-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
+  .who-row{display:flex;align-items:center;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+  .who-row .mk{font-family:var(--serif);font-weight:400;color:var(--red);font-size:15px;width:30px;flex:none}
+  .who-row span{font-size:17px;font-weight:500}
+
+  /* details */
+  .details{display:grid;grid-template-columns:repeat(2,1fr);gap:0 64px}
+  .drow{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:24px 0;border-bottom:1px solid var(--line)}
+  .drow .k{color:var(--muted);font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+  .drow .v{font-family:var(--serif);font-weight:500;font-size:20px;text-align:right}
+
+  /* register */
+  .register{background:var(--ink);color:var(--paper);padding:120px 0}
+  .reg-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center}
+  .register .eyebrow{color:var(--red-bright)}
+  .register .eyebrow::before{background:var(--red-bright)}
+  .register h2{font-size:clamp(34px,4.4vw,60px);font-weight:400;margin:24px 0 0}
+  .register h2 em{font-style:italic;color:#e7ddd0}
+  .register .rp{color:var(--muted-d);max-width:480px;margin:22px 0 0;font-size:18px}
+  .register .partner-link{display:inline-flex;align-items:center;gap:10px;margin-top:28px;font-weight:600;font-size:15px;color:var(--paper);border-bottom:1.5px solid var(--red-bright);padding-bottom:4px;transition:color .25s}
+  .register .partner-link:hover{color:var(--red-bright)}
+
+  /* form card */
+  .reg-card{background:var(--paper);color:var(--text);border-radius:8px;padding:38px}
+  .reg-card .ttl{font-family:var(--serif);font-weight:500;font-size:22px;margin-bottom:4px}
+  .reg-card .sttl{color:var(--muted);font-size:14px;margin-bottom:26px}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .field label .req{color:var(--red)}
+  .field input,.field select,.field textarea{
+    width:100%;font-family:var(--sans);font-size:15.5px;color:var(--text);
+    background:#fff;border:1px solid var(--line);border-radius:4px;padding:13px 14px;transition:border-color .2s,box-shadow .2s;
+  }
+  .field textarea{resize:vertical;min-height:96px}
+  .field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239c1822' stroke-width='1.6' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(156,24,34,.12)}
+  .field input[aria-invalid="true"],.field textarea[aria-invalid="true"]{border-color:var(--red)}
+  .field-err{display:block;color:var(--red);font-size:12.5px;margin-top:6px;min-height:1px}
+  .reg-card .btn-primary{width:100%;justify-content:center;margin-top:6px}
+  .reg-card .btn-primary:disabled{opacity:.6;cursor:not-allowed}
+  .gotcha{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .form-note{font-size:12.5px;color:var(--muted);margin-top:14px;text-align:center}
+  .form-status{font-size:14px;margin-top:16px;display:none}
+  .form-status.err{display:block;color:var(--red)}
+  .reg-success{display:none;text-align:center;padding:24px 8px}
+  .reg-success.show{display:block}
+  .reg-success .ok{width:54px;height:54px;border-radius:50%;border:1.5px solid var(--red);display:grid;place-items:center;margin:0 auto 18px}
+  .reg-success .ok svg{width:24px;height:24px;stroke:var(--red);fill:none;stroke-width:2}
+  .reg-success h3{font-family:var(--serif);font-weight:500;font-size:24px;margin-bottom:8px}
+  .reg-success p{color:var(--muted);font-size:15.5px}
+
+  /* sponsor */
+  .sponsor-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .sponsor-grid h2{font-size:clamp(30px,3.8vw,46px);font-weight:400;margin:20px 0 0}
+  .sponsor-grid p{color:var(--muted);font-size:17px;margin-top:20px;max-width:480px}
+  .contact{display:grid;gap:14px}
+  .contact a{display:flex;align-items:center;gap:18px;padding:20px 22px;border:1px solid var(--line);border-radius:5px;background:var(--paper);transition:border-color .25s,transform .25s}
+  .contact a:hover{border-color:var(--red);transform:translateX(4px)}
+  .contact .ic{width:42px;height:42px;flex:none;border:1.5px solid var(--red);border-radius:4px;display:grid;place-items:center}
+  .contact .ic svg{width:19px;height:19px;stroke:var(--red);fill:none;stroke-width:1.6}
+  .contact small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .contact b{font-family:var(--serif);font-weight:500;font-size:17px;word-break:break-word}
+
+  /* footer */
+  footer{background:var(--ink);color:var(--muted-d);padding:80px 0 38px;border-top:1px solid var(--line-d)}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:48px;padding-bottom:54px;border-bottom:1px solid var(--line-d)}
+  footer .brand{margin-bottom:22px}
+  footer .brand .wm{color:var(--paper)}
+  footer .fdesc{font-size:15px;max-width:340px;line-height:1.65}
+  .fcol h5{font-family:var(--sans);font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--red-bright);margin-bottom:18px}
+  .fcol a,.fcol span{display:block;font-size:15px;margin-bottom:12px;transition:color .25s}
+  .fcol a:hover{color:var(--paper)}
+  .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:13px;letter-spacing:.03em}
+  .foot-bottom .tl{font-family:var(--serif);font-style:italic;color:var(--paper)}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:980px){
+    .hero-grid,.about-grid,.conv-grid,.sponsor-grid,.foot-grid,.reg-grid{grid-template-columns:1fr;gap:48px}
+    .hero{padding:70px 0 0}
+    .hero-panel{order:-1}
+    .why-grid{grid-template-columns:1fr 1fr}
+    .why-item:nth-child(2){border-right:none}
+    .why-item{padding-right:30px}
+    .spk-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}
+    .who-grid,.details{grid-template-columns:1fr}
+    .nav-links,.nav-cta{display:none}
+    .burger{display:flex}
+    .utility{display:none}
+  }
+  @media(max-width:560px){
+    .wrap{padding:0 22px}
+    .why-grid{grid-template-columns:1fr}
+    .why-item{border-right:none!important;padding-right:0}
+    .mobile a{font-size:28px}
+    .cd b{font-size:28px}
+    .form-row{grid-template-columns:1fr}
+    .reg-card{padding:28px}
+  }
+</style>
+</head>
+<body>
+
+<!-- UTILITY BAR -->
+<div class="utility">
+  <div class="wrap">
+    <div class="u-l">21 June 2026 <span class="sep">·</span> Lagos, Nigeria <span class="sep">·</span> Physical Event</div>
+    <div class="u-r">
+      <a href="mailto:products@stephenakintayo.com">products@stephenakintayo.com</a>
+      <a href="tel:+2348167901719">+234 816 790 1719</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">
+      <span class="mk">G</span>
+      <span class="wm">GPBC 2026<small>Lagos Edition</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#why">Why Attend</a>
+      <a href="#convener">Convener</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#details">Details</a>
+      <a href="#sponsor">Partnership</a>
+    </nav>
+    <a href="#register" class="nav-cta">Register</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile" id="mobile">
+  <a href="#about"><span>01</span>About</a>
+  <a href="#why"><span>02</span>Why Attend</a>
+  <a href="#convener"><span>03</span>Convener</a>
+  <a href="#speakers"><span>04</span>Speakers</a>
+  <a href="#details"><span>05</span>Details</a>
+  <a href="#sponsor"><span>06</span>Partnership</a>
+  <a href="#register"><span>07</span>Register</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow reveal">Lagos Edition · 21 June 2026</span>
+      <h1 class="reveal">Global Property<br>Brokers <em>Conference</em></h1>
+      <p class="sub reveal">A one-day, in-person convening of brokers, investors and real estate leaders — built for professionals serious about growing their business, expanding their network and transacting with confidence.</p>
+      <p class="tagline reveal">Connect <i>·</i> Collaborate <i>·</i> Close Deals</p>
+      <div class="hero-cta reveal">
+        <a href="#register" class="btn btn-primary">Register to Attend <span class="arr">→</span></a>
+        <a href="#about" class="btn btn-outline-d">About the Conference</a>
+      </div>
+    </div>
+
+    <aside class="hero-panel reveal">
+      <h4>Event Details</h4>
+      <div class="fact"><span class="k">Date</span><span class="v">21 June 2026</span></div>
+      <div class="fact"><span class="k">Location</span><span class="v">Lagos, Nigeria</span></div>
+      <div class="fact"><span class="k">Format</span><span class="v">Physical Event</span></div>
+      <div class="cd-wrap">
+        <div class="lbl">Countdown to Conference</div>
+        <div class="cd-row" id="countdown">
+          <div class="cd"><b data-cd="days">--</b><small>Days</small></div>
+          <div class="cd"><b data-cd="hours">--</b><small>Hours</small></div>
+          <div class="cd"><b data-cd="mins">--</b><small>Minutes</small></div>
+          <div class="cd"><b data-cd="secs">--</b><small>Seconds</small></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- subtle blueprint skyline -->
+  <div class="skyline" aria-hidden="true">
+    <svg viewBox="0 0 1440 150" preserveAspectRatio="none" fill="none" stroke="#f3efe8" stroke-width="1.4" vector-effect="non-scaling-stroke">
+      <path d="M0 150 V96 H46 V72 H92 V108 H150 V60 H196 V100 H250 V80 H300 V120 H360 V52 H404 V96 H470 V112 H520 V70 H560 V110 H612"/>
+      <path d="M612 110 V40 M612 40 L560 92 M612 40 L664 92 M612 52 L532 100 M612 52 L692 100 M612 64 L504 110 M612 64 L720 110"/>
+      <path d="M504 112 H760"/>
+      <path d="M760 150 V104 H812 V64 H856 V104 H910 V46 H954 V96 H1010 V72 H1060 V116 H1120 V56 H1164 V100 H1230 V84 H1280 V120 H1340 V64 H1386 V104 H1440 V150 Z"/>
+    </svg>
+  </div>
+</section>
+
+<!-- CREDIBILITY STRIP -->
+<div class="credit">
+  <div class="wrap">
+    <span>Hosted by the <b>Stephen Akintayo Foundation</b></span>
+    <span class="dot"></span>
+    <span>Convened by <b>Dr. Stephen Akintayo</b></span>
+    <span class="dot"></span>
+    <span>Founder, <b>SACI Holdings</b></span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="sec about" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow light">About the Conference</span>
+      <h2>A focused gathering for serious real estate professionals.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="body-col reveal">
+        <p class="lead">The Global Property Brokers Conference 2026 brings brokers, investors and industry leaders together for a single, high-value day in Lagos.</p>
+        <p>Hosted by the Stephen Akintayo Foundation and convened by Dr. Stephen Akintayo, the Lagos Edition is designed for professionals who want to grow their business, expand their network and close meaningful deals.</p>
+        <p>Across one intensive day, attendees gain direct insight from global and local authorities in real estate, connect with credible peers and partners, and leave with practical strategies they can apply immediately.</p>
+      </div>
+      <div class="pillars reveal">
+        <div class="pillar"><h3><span class="n">01</span>One-day intensive</h3><p>A concentrated programme designed to deliver maximum value within a single, well-structured day.</p></div>
+        <div class="pillar"><h3><span class="n">02</span>Global &amp; local expertise</h3><p>Insight from internationally recognised figures alongside a proven leader in the African market.</p></div>
+        <div class="pillar"><h3><span class="n">03</span>In-person in Lagos</h3><p>A physical event built for genuine connection, conversation and deal-making.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ATTEND -->
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why Attend</span>
+      <h2>A day structured to move your business forward.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal"><span class="n">01</span><h3>Learn from proven leaders</h3><p>Gain practical insight from global real estate authorities and a leader who has built and scaled property businesses across markets.</p></div>
+      <div class="why-item reveal"><span class="n">02</span><h3>Expand your network</h3><p>Connect with brokers, developers and investors from across Nigeria and beyond — the partners and clients who shape your next opportunity.</p></div>
+      <div class="why-item reveal"><span class="n">03</span><h3>Close meaningful deals</h3><p>The programme is built to bring opportunities, properties and decision-makers into the same room.</p></div>
+      <div class="why-item reveal"><span class="n">04</span><h3>Sharpen your strategy</h3><p>Leave with actionable approaches to sales, marketing, negotiation and growth you can apply immediately.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONVENER -->
+<section class="sec conv" id="convener">
+  <div class="wrap">
+    <div class="conv-grid">
+      <div class="portrait reveal">
+        <span class="mono">SA</span>
+        <img class="person" src="https://usngrealestate.com/wp-content/uploads/2024/10/Dr-Stephen-Akintayo-2.jpg" alt="Dr. Stephen Akintayo" onerror="this.remove()">
+        <div class="cap"><b>Dr. Stephen Akintayo</b><span>Convener, GPBC 2026</span></div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow light">The Convener</span>
+        <h2>Dr. Stephen Akintayo</h2>
+        <div class="role">Founder, SACI Holdings · Convener, GPBC</div>
+        <p>Dr. Stephen Akintayo is one of Africa's foremost real estate investors and entrepreneurs. As founder of SACI Holdings and convener of the Global Property Brokers Conference, he has dedicated his career to building wealth, empowering brokers and advancing the property sector across the continent.</p>
+        <p>At GPBC 2026, he leads a programme created to elevate every professional in the room — from emerging agents to established investors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKERS -->
+<section class="sec" id="speakers">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow light">Featured Speakers</span>
+      <h2>Insight from leaders shaping the industry.</h2>
+      <p>A programme delivered live on stage and through exclusive recorded sessions.</p>
+    </div>
+    <div class="spk-grid">
+      <div class="spk reveal">
+        <div class="ph">
+          <span class="mono">SA</span>
+          <img class="person" src="https://usngrealestate.com/wp-content/uploads/2024/10/Dr-Stephen-Akintayo-2.jpg" alt="Dr. Stephen Akintayo" onerror="this.remove()">
+          <span class="tag key">Keynote · Live</span>
+        </div>
+        <div class="meta"><h3>Dr. Stephen Akintayo</h3><div class="role">Founder, SACI Holdings</div><p>Convener of GPBC and a leading voice in African real estate investment.</p></div>
+      </div>
+      <div class="spk reveal">
+        <div class="ph">
+          <span class="mono">GC</span>
+          <img class="person" src="https://pub-f59dc7a7d1bb4f49b64dcfeeada933e6.r2.dev/Grant-Cardone.png" alt="Grant Cardone" onerror="this.remove()">
+          <span class="tag">Recorded Session</span>
+        </div>
+        <div class="meta"><h3>Grant Cardone</h3><div class="role">Investor &amp; Author</div><p>Internationally recognised real estate investor and sales authority.</p></div>
+      </div>
+      <div class="spk reveal">
+        <div class="ph">
+          <span class="mono">RS</span>
+          <img class="person" src="https://pbs.twimg.com/profile_images/1974125693970567168/FWECLkXl_400x400.jpg" alt="Ryan Serhant" onerror="this.remove()">
+          <span class="tag">Recorded Session</span>
+        </div>
+        <div class="meta"><h3>Ryan Serhant</h3><div class="role">Broker &amp; Founder</div><p>Top-producing broker and influential figure in modern property sales.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO SHOULD ATTEND -->
+<section class="sec who" id="who">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow light">Who Should Attend</span>
+      <h2>Built for professionals across the property sector.</h2>
+    </div>
+    <div class="who-grid reveal">
+      <div class="who-row"><span class="mk">01</span><span>Real estate brokers &amp; agents</span></div>
+      <div class="who-row"><span class="mk">02</span><span>Property investors &amp; developers</span></div>
+      <div class="who-row"><span class="mk">03</span><span>Realtors looking to scale</span></div>
+      <div class="who-row"><span class="mk">04</span><span>Sales &amp; marketing professionals</span></div>
+      <div class="who-row"><span class="mk">05</span><span>Entrepreneurs entering the property market</span></div>
+      <div class="who-row"><span class="mk">06</span><span>Professionals building wealth through real estate</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAILS -->
+<section class="sec tight" id="details">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow light">Event Details</span>
+      <h2>The essentials.</h2>
+    </div>
+    <div class="details reveal">
+      <div class="drow"><span class="k">Event</span><span class="v">GPBC 2026 — Lagos Edition</span></div>
+      <div class="drow"><span class="k">Date</span><span class="v">21 June 2026</span></div>
+      <div class="drow"><span class="k">Location</span><span class="v">Lagos, Nigeria</span></div>
+      <div class="drow"><span class="k">Format</span><span class="v">Physical Event</span></div>
+      <div class="drow"><span class="k">Convener</span><span class="v">Dr. Stephen Akintayo</span></div>
+      <div class="drow"><span class="k">Hosted By</span><span class="v">Stephen Akintayo Foundation</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER -->
+<section class="register" id="register">
+  <div class="wrap">
+    <div class="reg-grid">
+      <div class="reveal">
+        <span class="eyebrow">Secure Your Place</span>
+        <h2>Register for <em>GPBC 2026</em></h2>
+        <p class="rp">Capacity for the Lagos Edition is limited. Complete the form to confirm your attendance at this in-person convening of brokers, investors and real estate leaders.</p>
+        <a href="#sponsor" class="partner-link">Interested in partnering instead? <span class="arr">→</span></a>
+      </div>
+
+      <div class="reg-card reveal">
+        <!-- Success state -->
+        <div class="reg-success" id="regSuccess">
+          <div class="ok"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h3>Registration received</h3>
+          <p>Thank you for registering for GPBC 2026. Our team will be in touch with confirmation and event details shortly.</p>
+        </div>
+
+        <!-- Form -->
+        <form id="regForm" action="https://formspree.io/f/meedbnbq" method="POST" novalidate>
+          <div class="ttl">Reserve your seat</div>
+          <div class="sttl">21 June 2026 · Lagos, Nigeria · Physical Event</div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="fullName">Full Name <span class="req">*</span></label>
+              <input type="text" id="fullName" name="name" autocomplete="name" required />
+              <span class="field-err" data-err="name"></span>
+            </div>
+            <div class="field">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+              <span class="field-err" data-err="email"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="phone">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" required />
+              <span class="field-err" data-err="phone"></span>
+            </div>
+            <div class="field">
+              <label for="company">Company / Brokerage</label>
+              <input type="text" id="company" name="company" autocomplete="organization" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="role">I am attending as <span class="req">*</span></label>
+            <select id="role" name="role" required>
+              <option value="" disabled selected>Select an option</option>
+              <option>Real estate broker / agent</option>
+              <option>Property investor / developer</option>
+              <option>Realtor looking to scale</option>
+              <option>Sales &amp; marketing professional</option>
+              <option>Entrepreneur entering property</option>
+              <option>Other</option>
+            </select>
+            <span class="field-err" data-err="role"></span>
+          </div>
+
+          <div class="field">
+            <label for="message">Anything we should know? (optional)</label>
+            <textarea id="message" name="message" placeholder="Questions, accessibility needs, group registrations…"></textarea>
+          </div>
+
+          <!-- Formspree config + spam honeypot -->
+          <input type="hidden" name="_subject" value="New GPBC 2026 Registration" />
+          <input type="text" name="_gotcha" class="gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <button type="submit" class="btn btn-primary" id="regSubmit">Submit Registration <span class="arr">→</span></button>
+          <div class="form-status" id="formStatus"></div>
+          <p class="form-note">We'll only use your details to manage your conference registration.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SPONSOR -->
+<section class="sec" id="sponsor">
+  <div class="wrap">
+    <div class="sponsor-grid">
+      <div class="reveal">
+        <span class="eyebrow light">Sponsorship &amp; Partnership</span>
+        <h2>Reach a focused audience of decision-makers.</h2>
+        <p>The Global Property Brokers Conference offers partnership opportunities for organisations looking to connect with brokers, investors and leaders across the real estate community. Speak with our team about visibility, activation and tailored partnership packages.</p>
+      </div>
+      <div class="contact reveal">
+        <a href="mailto:products@stephenakintayo.com">
+          <span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <span><small>Email</small><b>products@stephenakintayo.com</b></span>
+        </a>
+        <a href="tel:+2348167901719">
+          <span class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+          <span><small>Nigeria</small><b>+234 816 790 1719</b></span>
+        </a>
+        <a href="tel:+12815050527">
+          <span class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+          <span><small>International</small><b>+1 (281) 505-0527</b></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="brand"><span class="mk">G</span><span class="wm">GPBC 2026<small>Lagos Edition</small></span></a>
+        <p class="fdesc">The Global Property Brokers Conference 2026 — convened by Dr. Stephen Akintayo and hosted by the Stephen Akintayo Foundation.</p>
+      </div>
+      <div class="fcol">
+        <h5>Navigate</h5>
+        <a href="#about">About</a>
+        <a href="#why">Why Attend</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#details">Event Details</a>
+        <a href="#register">Register</a>
+      </div>
+      <div class="fcol">
+        <h5>Contact</h5>
+        <a href="mailto:products@stephenakintayo.com">products@stephenakintayo.com</a>
+        <a href="tel:+2348167901719">+234 816 790 1719</a>
+        <a href="tel:+12815050527">+1 (281) 505-0527</a>
+        <span>Lagos, Nigeria</span>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Global Property Brokers Conference. All rights reserved.</span>
+      <span class="tl">Connect · Collaborate · Close Deals</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  const burger = document.getElementById('burger');
+  const mobile = document.getElementById('mobile');
+  const toggle = (open) => {
+    burger.classList.toggle('open', open);
+    mobile.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+  burger.addEventListener('click', () => toggle(!mobile.classList.contains('open')));
+  mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => toggle(false)));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('section, .credit').forEach(sec => {
+    sec.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 5) * 80 + 'ms'; });
+  });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const target = new Date('2026-06-21T09:00:00+01:00').getTime();
+  const set = (k, v) => { const el = document.querySelector('[data-cd="'+k+'"]'); if (el) el.textContent = String(v).padStart(2,'0'); };
+  const tick = () => {
+    const diff = target - Date.now();
+    if (diff <= 0){ set('days',0);set('hours',0);set('mins',0);set('secs',0); return; }
+    set('days', Math.floor(diff/86400000));
+    set('hours', Math.floor(diff%86400000/3600000));
+    set('mins', Math.floor(diff%3600000/60000));
+    set('secs', Math.floor(diff%60000/1000));
+  };
+  tick(); setInterval(tick, 1000);
+
+  /* ---- Formspree AJAX registration ---- */
+  (function(){
+    const form = document.getElementById('regForm');
+    if (!form) return;
+    const card = form.closest('.reg-card');
+    const success = document.getElementById('regSuccess');
+    const submitBtn = document.getElementById('regSubmit');
+    const status = document.getElementById('formStatus');
+    const btnLabel = submitBtn.innerHTML;
+
+    const clearErrors = () => {
+      form.querySelectorAll('.field-err').forEach(e => e.textContent = '');
+      form.querySelectorAll('[aria-invalid]').forEach(e => e.removeAttribute('aria-invalid'));
+      status.className = 'form-status';
+      status.textContent = '';
+    };
+    const showFieldError = (name, msg) => {
+      const slot = form.querySelector('.field-err[data-err="'+name+'"]');
+      const input = form.querySelector('[name="'+name+'"]');
+      if (slot) slot.textContent = msg;
+      if (input) input.setAttribute('aria-invalid', 'true');
+    };
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      clearErrors();
+
+      // lightweight client-side check
+      let ok = true;
+      [['name','Please enter your name.'],['email','Please enter your email.'],['phone','Please enter your phone number.'],['role','Please select an option.']].forEach(([n,m]) => {
+        const f = form.querySelector('[name="'+n+'"]');
+        if (f && !f.value.trim()){ showFieldError(n, m); ok = false; }
+      });
+      const emailEl = form.querySelector('[name="email"]');
+      if (emailEl.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)){ showFieldError('email','Please enter a valid email address.'); ok = false; }
+      if (!ok) return;
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Submitting…';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          form.style.display = 'none';
+          success.classList.add('show');
+          if (card) card.scrollIntoView({behavior:'smooth', block:'center'});
+        } else {
+          const data = await res.json().catch(() => ({}));
+          if (data && Array.isArray(data.errors) && data.errors.length) {
+            data.errors.forEach(err => {
+              if (err.field) showFieldError(err.field, err.message || 'Please check this field.');
+            });
+            status.className = 'form-status err';
+            status.textContent = 'Please review the highlighted fields and try again.';
+          } else {
+            status.className = 'form-status err';
+            status.textContent = 'Something went wrong. Please try again, or email products@stephenakintayo.com.';
+          }
+        }
+      } catch (err) {
+        status.className = 'form-status err';
+        status.textContent = 'Network error. Please check your connection and try again.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = btnLabel;
+      }
+    });
+  })();
+</script>
+</body>
+</html>
